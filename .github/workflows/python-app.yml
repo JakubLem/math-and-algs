@@ -34,4 +34,6 @@ jobs:
     - name: Test with pytest
       run: |
         pytest -x -vv
+    - name: Test with pylama
+      run: |
         pylama
