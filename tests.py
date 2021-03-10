@@ -1,10 +1,11 @@
 from algs import important_algs as ia
 from algs import sort as s
 
+
 class Test:
     def test_test(self):
-        assert True == True
-        assert False == False
+        assert True == True # noqa
+        assert False == False # noqa
 
 
 class TestALGS:
@@ -30,6 +31,6 @@ class TestALGS:
 
 class TestSort:
     def test_insertion_sort(self):
-        array = [12, 11, 13, 5, 6] 
+        array = [12, 11, 13, 5, 6]
         s.insertion_sort(array)
         assert array == [5, 6, 11, 12, 13]

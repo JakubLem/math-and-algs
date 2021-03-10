@@ -6,7 +6,7 @@ def alg_min(a, b):
 
 
 def alg_max(a, b):
-    # Funkcjia zwraca największą liczbę 
+    # Funkcjia zwraca największą liczbę
     if a > b:
         return a
     return b
@@ -30,7 +30,7 @@ def iter_nww(a, b):
 
     last = a*b
     while nww <= last:
-        if nww%a == 0 and nww%b == 0:
+        if nww % a == 0 and nww % b == 0:
             return nww
         nww += 1
     return last
