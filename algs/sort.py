@@ -8,6 +8,4 @@ def insertion_sort(array):
             j -= 1
         array[j+1] = k
 
-array = [12, 11, 13, 5, 6] 
-insertion_sort(array)
-# TODO write tests
+

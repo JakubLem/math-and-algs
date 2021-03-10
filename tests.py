@@ -1,5 +1,5 @@
 from algs import important_algs as ia
-
+from algs import sort as s
 
 class Test:
     def test_test(self):
@@ -22,3 +22,9 @@ class TestALGS:
         assert ia.alg_max(1, 100) == 100
         assert ia.alg_max(90, 999) == 999
 
+
+class TestSort:
+    def test_insertion_sort(self):
+        array = [12, 11, 13, 5, 6] 
+        s.insertion_sort(array)
+        assert array == [5, 6, 11, 12, 13]
