@@ -27,6 +27,7 @@ class TestALGS:
         assert ia.iter_nww(10, 15) == 30
         assert ia.iter_nww(3, 4) == 12
         assert ia.iter_nww(15, 75) == 75
+        assert ia.iter_nww(3, 6) == 6
 
 
 class TestSort:
