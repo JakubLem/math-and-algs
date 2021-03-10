@@ -8,4 +8,3 @@ def insertion_sort(array):
             j -= 1
         array[j+1] = k
 
-

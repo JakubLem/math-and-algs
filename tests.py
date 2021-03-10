@@ -22,6 +22,11 @@ class TestALGS:
         assert ia.alg_max(1, 100) == 100
         assert ia.alg_max(90, 999) == 999
 
+    def test_iter_nww(self):
+        assert ia.iter_nww(10, 15) == 30
+        assert ia.iter_nww(3, 4) == 12
+        assert ia.iter_nww(15, 75) == 75
+
 
 class TestSort:
     def test_insertion_sort(self):
