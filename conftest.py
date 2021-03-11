@@ -1,10 +1,12 @@
 import pytest
 import random
-import models
+from algs import models
 
 @pytest.fixture
 def correct_powers():
     correct_powers = list()
-    for i in range(10):
+    i = 0
+    while i < 10:
         correct_powers.append(models.CorrectPower(random.randint(10, 100), random.randint(10, 100)))
+        i += 1
     return correct_powers

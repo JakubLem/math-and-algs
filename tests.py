@@ -29,6 +29,11 @@ class TestALGS:
         assert ia.iter_nww(15, 75) == 75
         assert ia.iter_nww(3, 6) == 6
 
+    def test_quadratic_equation(self):
+        a = 1
+        b = 6
+        c = 9
+        assert "1" == ia.quadratic_equation(a, b, c).string
 
 class TestSort:
     def test_insertion_sort(self):
@@ -41,3 +46,7 @@ class TestPower:
     def test_iter_power(self, correct_powers):
         for correct_power in correct_powers:
             assert ia.iter_pow(correct_power.n, correct_power.p) == correct_power.correct_power
+
+    def test_rec_power(self, correct_powers):
+        for correct_power in correct_powers:
+            assert ia.rec_pow(correct_power.n, correct_power.p) == correct_power.correct_power
