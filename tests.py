@@ -35,3 +35,9 @@ class TestSort:
         array = [12, 11, 13, 5, 6]
         s.insertion_sort(array)
         assert array == [5, 6, 11, 12, 13]
+
+
+class TestPower:
+    def test_iter_power(self, correct_powers):
+        for correct_power in correct_powers:
+            assert ia.iter_pow(correct_power.n, correct_power.p) == correct_power.correct_power

@@ -34,3 +34,36 @@ def iter_nww(a, b):
             return nww
         nww += 1
     return last
+
+
+def iter_pow(n, p):
+    result = n
+    for i in range(1, p, 1):
+        result *= n
+    return result
+
+
+def rec_pow(n, p, m=None):
+    if n == 1:
+        return 1
+    if p == 1:
+        return n
+    if not m:
+        m = n
+    return rec_pow(n*m, p-1, m)
+    
+
+def quadratic_equation(a, b, c):
+    if a == 0:
+        return "This equation is not quadratic!"
+    
+    delta = pow(b, 2)
+
+
+def solve_polynomial(polynomial):
+
+
+
+
+
+
