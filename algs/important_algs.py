@@ -61,9 +61,4 @@ def quadratic_equation(a, b, c):
 
 
 def solve_polynomial(polynomial):
-
-
-
-
-
-
+    pass
