@@ -1,6 +1,6 @@
 import pytest
 import random
-from . import models
+import models
 
 @pytest.fixture
 def correct_powers():
