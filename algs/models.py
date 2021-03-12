@@ -12,3 +12,17 @@ class SolvedPolynomial:
 
     def __str__(self):
         return self.string
+
+class Polynomial:
+    def __init__(self, coefficients):
+        self.coefficients = coefficients
+    
+    @property
+    def max_power(self):
+        return len(self.coefficients)-1
+
+    @property
+    def string(self):
+        mp = self.max_power
+        string = ""
+        return string
