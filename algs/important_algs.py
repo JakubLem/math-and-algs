@@ -1,5 +1,5 @@
 import math
-from . import models
+import models
 
 
 def alg_min(a, b):
@@ -82,3 +82,33 @@ def quadratic_equation(a, b, c):
 
 def solve_polynomial(polynomial):
     pass
+
+
+def binary_search_v1(elem, sorted_array):
+    pointer = math.floor(len(sorted_array)/2)
+    if pointer == 0:
+        return False
+    if sorted_array[pointer] == elem:
+        return True
+    if elem < sorted_array[pointer]:
+        return binary_search_v1(elem, sorted_array[:pointer])
+    return binary_search_v1(elem, sorted_array[pointer:])
+
+
+def binary_search_v2(elem, sorted_array, start=None, stop=None):
+    if not start:
+        start = 0
+    if not stop:
+        stop = len(sorted_array)
+    pointer = math.floor((start + stop)/2)
+    if sorted_array[pointer] == elem:
+        return True
+    if start == pointer:
+        return False
+    if elem < sorted_array[pointer]:
+        return binary_search_v2(elem, sorted_array, start, pointer)
+    return binary_search_v2(elem, sorted_array, pointer, stop)
+
+
+array = [0,1,2,3,4,5,6,7,8]
+print(binary_search_v2(10, array))
