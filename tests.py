@@ -33,7 +33,21 @@ class TestALGS:
         a = 1
         b = 6
         c = 9
-        assert "1" == ia.quadratic_equation(a, b, c).string
+        assert "(x-3.0)(x-3.0)" == ia.quadratic_equation(a, b, c).string
+
+    def test_array_min(self):
+        array = [9, 2, 15, 16, 17]
+        assert ia.array_min(array) == 2
+
+        array = [190, 7, 18, 17, 20]
+        assert ia.array_min(array) == 7
+
+    def test_array_max(self):
+        array = [9, 2, 15, 16, 17]
+        assert ia.array_min(array) == 17
+
+        array = [190, 7, 18, 17, 20]
+        assert ia.array_min(array) == 100
 
 class TestSort:
     def test_insertion_sort(self):

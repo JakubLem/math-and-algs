@@ -1,5 +1,5 @@
 import math
-import models
+from . import models
 
 
 def alg_min(a, b):
@@ -110,5 +110,21 @@ def binary_search_v2(elem, sorted_array, start=None, stop=None):
     return binary_search_v2(elem, sorted_array, pointer, stop)
 
 
-array = [0,1,2,3,4,5,6,7,8]
-print(binary_search_v2(10, array))
+# array = [0,1,2,3,4,5,6,7,8]
+# print(binary_search_v2(10, array))
+def array_min(array):
+    n = len(array)
+    minimum = array[0]
+    for i in range(1, n, 1):
+        if array[i] < minimum:
+            minimum = array[i]
+    return minimum
+
+
+def array_max(array):
+    n = len(array)
+    maximum = array[0]
+    for i in range(1, n, 1):
+        if array[i] > maximum:
+            maximum = array[i]
+    return maximum
