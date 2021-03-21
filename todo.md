@@ -1,8 +1,3 @@
-# DEV
-
-- dodać pylamę
-
-
 # ALGS:
 
-- dodać sortowania
+- add bubble sort
