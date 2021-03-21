@@ -44,10 +44,10 @@ class TestALGS:
 
     def test_array_max(self):
         array = [9, 2, 15, 16, 17]
-        assert ia.array_min(array) == 17
+        assert ia.array_max(array) == 17
 
         array = [190, 7, 18, 17, 20]
-        assert ia.array_min(array) == 100
+        assert ia.array_max(array) == 190
 
 
 class TestSort:
