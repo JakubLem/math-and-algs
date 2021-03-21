@@ -11,4 +11,4 @@ def insertion_sort(array):
 
 
 def bubble_sort(array):
-    pass
+    return array
