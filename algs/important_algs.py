@@ -1,5 +1,5 @@
 import math
-from . import models # noqa:E0402
+# from . import models # noqa:E0402
 
 
 def alg_min(a, b):
@@ -127,3 +127,14 @@ def array_max(array):
         if array[i] > maximum:
             maximum = array[i]
     return maximum
+
+
+def is_anagram(word_1, word_2):
+    if len(word_1) == len(word_2) and sorted(word_1) == sorted(word_2):
+        return True
+    return False
+
+
+word_1 = "abc"
+word_2 = "bca"
+print(is_anagram(word_1, word_2))
