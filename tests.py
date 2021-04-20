@@ -51,10 +51,11 @@ class TestALGS:
 
 
 class TestSort:
-    def test_insertion_sort(self):
-        array = [12, 11, 13, 5, 6]
-        s.insertion_sort(array)
-        assert array == [5, 6, 11, 12, 13]
+    def test_insertion_sort(self, my_lists):
+        for my_list in my_lists:
+            correct = sorted(my_list)
+            s.insertion_sort(my_list)
+            assert correct == my_list
 
     def test_bubble_sort_1(self, my_lists):
         for my_list in my_lists:
