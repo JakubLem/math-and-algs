@@ -56,6 +56,21 @@ class TestSort:
         s.insertion_sort(array)
         assert array == [5, 6, 11, 12, 13]
 
+    def test_bubble_sort_1(self, my_lists):
+        for my_list in my_lists:
+            correct = sorted(my_list)
+            assert s.bubble_sort_v1(my_list) == correct
+
+    def test_bubble_sort_2(self, my_lists):
+        for my_list in my_lists:
+            correct = sorted(my_list)
+            assert s.bubble_sort_v2(my_list) == correct
+
+    def test_bubble_sort_3(self, my_lists):
+        for my_list in my_lists:
+            correct = sorted(my_list)
+            assert s.bubble_sort_v3(my_list) == correct
+
 
 class TestPower:
     def test_iter_power(self, correct_powers):

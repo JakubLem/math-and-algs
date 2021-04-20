@@ -13,3 +13,17 @@ def correct_powers():
     return correct_powers
 
 
+@pytest.fixture
+def my_lists():
+    result = list()
+    i = 0
+    while i < 100:
+        temp = list()
+        x = 0
+        while x < 50:
+            temp.append(random.randint(0, 1000))
+            x+= 1
+        result.append(temp)
+        i += 1
+    return result
+

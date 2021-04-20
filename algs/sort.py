@@ -44,6 +44,9 @@ def bubble_sort_v3(array):
 
 
 array = [1, 9, 3, 4, 5, 0]
+new = sorted(array)
 print(array)
-new_array = bubble_sort_v3(array)
-print(new_array)
+print(new)
+# print(array)
+# new_array = bubble_sort_v3(array)
+# print(new_array)
