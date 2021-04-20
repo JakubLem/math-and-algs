@@ -41,12 +41,3 @@ def bubble_sort_v3(array):
                 array[i] = array[j]
                 array[j] = temp
     return array
-
-
-array = [1, 9, 3, 4, 5, 0]
-new = sorted(array)
-print(array)
-print(new)
-# print(array)
-# new_array = bubble_sort_v3(array)
-# print(new_array)

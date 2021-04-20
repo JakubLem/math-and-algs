@@ -26,4 +26,3 @@ def my_lists():
         result.append(temp)
         i += 1
     return result
-
