@@ -22,7 +22,7 @@ def my_lists():
         x = 0
         while x < 50:
             temp.append(random.randint(0, 1000))
-            x+= 1
+            x += 1
         result.append(temp)
         i += 1
     return result

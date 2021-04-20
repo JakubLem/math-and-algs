@@ -23,7 +23,7 @@ def bubble_sort_v1(array):
 
 def bubble_sort_v2(array):
     n = len(array)
-    for i in range(n-1):
+    for i in range(n-1): # noqa:W0612
         for j in range(n-1):
             if array[j] > array[j+1]:
                 temp = array[j]
