@@ -111,6 +111,17 @@ def binary_search_v2(elem, sorted_array, start=None, stop=None):
     return binary_search_v2(elem, sorted_array, pointer, stop)
 
 
+def binary_search_v3(elem, sorted_array, start, stop):
+    pointer = math.floor((start + stop)/2)
+    if sorted_array[pointer] == elem:
+        return True
+    if start == pointer:
+        return False
+    if elem < sorted_array[pointer]:
+        return binary_search_v2(elem, sorted_array, start, pointer)
+    return binary_search_v2(elem, sorted_array, pointer, stop)
+
+
 def array_min(array):
     n = len(array)
     minimum = array[0]
