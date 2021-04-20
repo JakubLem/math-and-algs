@@ -11,4 +11,16 @@ def insertion_sort(array):
 
 
 def bubble_sort(array):
+    n = len(array)
+    for i in range(0, n, 1):
+        for j in range(i, n, 1):
+            if array[i] > array[j]:
+                temp = array[i]
+                array[i] = array[j]
+                array[j] = temp
     return array
+
+
+array = [1, 9, 3, 4, 5]
+new_array = bubble_sort(array)
+print(new_array)
