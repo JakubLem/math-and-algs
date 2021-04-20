@@ -11,3 +11,5 @@ def correct_powers():
         correct_powers.append(models.CorrectPower(random.randint(10, 100), random.randint(10, 100)))
         i += 1
     return correct_powers
+
+
