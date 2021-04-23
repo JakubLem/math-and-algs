@@ -1,5 +1,5 @@
 import math
-from . import models # noqa:E0402
+# from . import models # noqa:E0402
 
 
 def alg_min(a, b):
@@ -146,6 +146,35 @@ def is_anagram(word_1, word_2):
     return False
 
 
+def is_palindrom(word_1, word_2):
+    word_1_list = list(word_1)
+    word_2_list = list(word_2)
+
+    if len(word_1_list) != len(word_2_list):
+        return False
+
+    for i in range(len(word_1_list) - 1):
+        for j in range(len(word_1_list) - 1):
+            if word_1_list[j] > word_1_list[j+1]:
+                temp = word_1_list[j]
+                word_1_list[j] = word_1_list[j+1]
+                word_1_list[j+1] = temp
+
+    for i in range(len(word_2_list) - 1):
+        for j in range(len(word_2_list) - 1):
+            if word_2_list[j] > word_2_list[j+1]:
+                temp = word_2_list[j]
+                word_2_list[j] = word_2_list[j+1]
+                word_2_list[j+1] = temp
+
+    for i in range(len(word_1_list)):
+        if word_1_list[i] != word_2_list[i]:
+            return False
+
+    return True
+
+
 word_1 = "abc"
 word_2 = "bca"
-print(is_anagram(word_1, word_2))
+print(is_palindrom(word_1, word_2))
+
