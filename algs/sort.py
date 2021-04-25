@@ -41,3 +41,14 @@ def bubble_sort_v3(array):
                 array[i] = array[j]
                 array[j] = temp
     return array
+
+
+def bubble_sort_v4(array):
+    n = len(array)
+    for i in range(0, n, 1):
+        for j in range(0, n - i - 1, 1):
+            if array[j] > array[j+1]:
+                temp = array[j]
+                array[j] = array[j+1]
+                array[j+1] = temp
+    return array
