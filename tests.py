@@ -77,6 +77,12 @@ class TestSort:
             correct = sorted(my_list)
             assert s.bubble_sort_v4(my_list) == correct
 
+    def test_heap_sort(self, my_lists):
+        for my_list in my_lists:
+            correct = sorted(my_list)
+            s.heap_sort(my_list)
+            assert my_list == correct
+
 
 class TestPower:
     def test_iter_power(self, correct_powers):
