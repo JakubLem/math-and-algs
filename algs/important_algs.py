@@ -1,5 +1,5 @@
 import math
-from . import models # noqa:E0402
+# from . import models # noqa:E0402
 
 
 def alg_min(a, b):
@@ -174,7 +174,23 @@ def is_palindrom(word_1, word_2):
     return True
 
 
-word_1 = "abc"
-word_2 = "bca"
-print(is_palindrom(word_1, word_2))
+# word_1 = "abc"
+# word_2 = "bca"
+# print(is_palindrom(word_1, word_2))
 
+
+def int_to_binary(number):
+    array = list()
+    while number != 0:
+        if number % 2 == 0:
+            array.append('0')
+        else:
+            array.append('1')
+        number = int(round(number/2))
+    result = str("")
+    for i in range(len(array)-1, -1, -1):
+        result += array[i]
+    return result
+
+print(int_to_binary(18))
+print("{0:b}".format(18))
