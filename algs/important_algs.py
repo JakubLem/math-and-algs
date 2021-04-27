@@ -153,24 +153,25 @@ def is_palindrom(word_1, word_2):
     if len(word_1_list) != len(word_2_list):
         return False
 
-    for i in range(len(word_1_list) - 1):
-        for j in range(len(word_1_list) - 1):
+    n = len(word_1_list)
+
+    for i in range(n - 1):
+        for j in range(n - 1):
             if word_1_list[j] > word_1_list[j+1]:
                 temp = word_1_list[j]
                 word_1_list[j] = word_1_list[j+1]
                 word_1_list[j+1] = temp
 
-    for i in range(len(word_2_list) - 1):
-        for j in range(len(word_2_list) - 1):
+    for i in range(n - 1):
+        for j in range(n - 1):
             if word_2_list[j] > word_2_list[j+1]:
                 temp = word_2_list[j]
                 word_2_list[j] = word_2_list[j+1]
                 word_2_list[j+1] = temp
 
-    for i in range(len(word_1_list)):
+    for i in range(n):
         if word_1_list[i] != word_2_list[i]:
             return False
-
     return True
 
 

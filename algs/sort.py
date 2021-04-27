@@ -66,7 +66,7 @@ def heap_sort(array):
         if largest != i:
             array[i], array[largest] = array[largest], array[i]
             heap_sort_func(array, n, largest)
-    
+
     for i in range(int(round(len(array)/2)), -1, -1):
         heap_sort_func(array, len(array), i)
     for i in range(len(array)-1, -1, -1):
