@@ -49,6 +49,11 @@ class TestALGS:
         array = [190, 7, 18, 17, 20]
         assert ia.array_max(array) == 190
 
+    def test_int_to_binary(self, random_numbers):
+        for rn in random_numbers:
+            print(rn)
+            assert ia.int_to_binary_v1(rn) == "{0:b}".format(rn)
+
 
 class TestSort:
     def test_insertion_sort(self, my_lists):

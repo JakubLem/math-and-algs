@@ -26,3 +26,13 @@ def my_lists():
         result.append(temp)
         i += 1
     return result
+
+
+@pytest.fixture
+def random_numbers():
+    result = list()
+    i = 0
+    while i < 1000:
+        result.append(random.randint(10, 100))
+        i += 1
+    return result
