@@ -1,5 +1,6 @@
 from algs import important_algs as ia
 from algs import sort as s
+from exercises import scripts as es
 
 
 class Test:
@@ -97,3 +98,11 @@ class TestPower:
     def test_rec_power(self, correct_powers):
         for correct_power in correct_powers:
             assert ia.rec_pow(correct_power.n, correct_power.p) == correct_power.correct_power
+
+
+class TestExercises:
+    def test_ex_1(self):
+        assert es.zad_1_2(4, [7, 5, 11, 33], 3) == 77
+        assert es.zad_1_2(5, [15, 12, 10, 6, 5, 1], 5) == 72
+        assert es.zad_1_2(11, [6, 28, 7, 12, 10, 14, 5, 9, 4, 8, 18], 7) == 216
+        assert es.zad_1_2(10, [4, 34, 16, 8, 6, 22, 14, 12, 2, 7], 2) == 0

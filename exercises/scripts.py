@@ -12,7 +12,7 @@ def zad_1_2(n, a, p):
     max_2 = -1
     for i in range(0, n, 1):
         if a[i] % p != 0:
-            if a[i] > max_1:
+            if a[i] > max_1 or a[i] > max_2:
                 if max_1 > max_2:
                     max_2 = a[i]
                 else:
@@ -20,5 +20,3 @@ def zad_1_2(n, a, p):
     if max_1 != -1 and max_2 != -1:
         return max_1*max_2
     return 0
-
-print(zad_1_2(4, [7, 5, 11, 33 ], 3))
