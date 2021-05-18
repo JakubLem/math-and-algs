@@ -25,6 +25,12 @@ def rec_nwd(a, b):
     return rec_nwd(b, a-b)
 
 
+def nwd_i(a, b):
+    while b:
+        a, b = b, a%b
+    return a
+
+
 def iter_nww(a, b):
     # Funkcja zwraca najmniejszą wspólną wielokrotność
     if a < b:
